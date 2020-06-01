@@ -1,0 +1,19 @@
+import numpy as np 
+
+d = 3
+D = 30
+N = 50
+
+#creating a random tensor network
+M = []
+for i in range(N):
+	M.append(i)
+ 
+
+for i in range(N):
+	if i == 0:
+		M[i] = np.random.rand(1, d, D)
+	elif i == N-1:
+		M[i] = np.random.rand(D, d, 1)
+	else:
+		M[i] = np.random.rand(D, d, D)
